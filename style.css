@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(92, 219, 166, 0.5)),url("coffee.jfif");
+    background-size: contain;
+    background-repeat: repeat;
+    font-family: 'Raleway', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+    background: darkgreen;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.itemcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: red;
+}
+
+.itemcontainer li {
+    padding: 1em;
+    display: block;
+    background-color: aqua;
+}
+
+.cover li {
+    color: white;
+}
+
+#description {
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+
+
+
+
+
