@@ -3,6 +3,22 @@ body, footer *{
     padding: 0;
 }
 
+body {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 25px;
+}
+
 .cover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(92, 219, 166, 0.5)),url("coffee.jfif");
     background-size: contain;
@@ -26,7 +42,7 @@ body, footer *{
     align-content: center;
 }
 
-.navigation {
+.desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -36,30 +52,76 @@ body, footer *{
     background: darkgreen;
 }
 
-.navigation a {
+.desktop a {
     text-decoration: none;
     display: block;
     padding: 1em;
     color: white;
 }
 
-.itemcontainer {
+.mobile {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: darkgreen;
+}
+
+.mobile a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.itemcontainer, .div4 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
+    border-collapse: separate;
+    padding: 15px;
 }
 
 .itemcontainer li, .div3 {
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 150, 0);
+    color: white;
+    box-shadow: 5px 5px rgb(128, 232, 112);
+    border-radius: 20px 30px;
+}
+
+.div4 li {
     padding: 1em;
-    margin-inline-end: 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(25, 150, 0);
     color: white;
+    box-shadow: 5px 5px rgb(128, 232, 112);
+}
+
+#item1 {
+    background-color: blue;
+    box-shadow: 5px 5px rgb(112, 232, 226);
+}
+
+.cover div {
+    margin-bottom: 1em;
+}
+
+a:hover {
+    color: red;
 }
 
 .cover li {
@@ -80,14 +142,43 @@ footer {
     background-color: rgb(11, 38, 73);
     color: white;
     font-family: 'Raleway', sans-serif;
+    display: flex;
 }
 
 footer a {
     color: white;
 }
 
+#footerlist {
+    display: flex;
+    flex-direction: column;
+}
+
 footer li {
     padding-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 640px) {
+    .itemcontainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .cover * {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
 
 
